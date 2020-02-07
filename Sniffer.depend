@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1581015208 source:/home/kevin/Documents/Redes I/Sniffer/fcontroller.cpp
+	"fcontroller.h"
+
+1581015205 /home/kevin/Documents/Redes I/Sniffer/fcontroller.h
+	<fstream>
+	<iostream>
+	<string>
+
+1581015788 source:/home/kevin/Documents/Redes I/Sniffer/main.cpp
+	<iostream>
+	<iomanip>
+	"fcontroller.h"
+
