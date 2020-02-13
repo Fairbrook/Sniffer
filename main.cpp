@@ -34,7 +34,7 @@ int main()
         if(type2 == 6) cout << "ARP";
     }else{
         if(type1 == 128 && type2 == 53) cout << "RARP";
-        if(type1 == 134 && type2 == 221) cout << "RARP";
+        if(type1 == 134 && type2 == 221) cout << "IPv6";
     }
     cout << ">" << endl;
     cout << "Datos: ";
