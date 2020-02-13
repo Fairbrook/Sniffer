@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="byte.cpp" />
+		<Unit filename="byte.h" />
 		<Unit filename="fcontroller.cpp" />
 		<Unit filename="fcontroller.h" />
 		<Unit filename="main.cpp" />

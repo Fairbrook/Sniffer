@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 
+#include "byte.h"
+
 class FController {
 private:
     std::fstream file;
@@ -13,7 +15,7 @@ private:
 
 public:
     FController(const std::string&);
-    unsigned char getNext();
+    Byte getNext();
     bool isEOF();
 };
 

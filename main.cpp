@@ -2,6 +2,7 @@
 #include <iomanip>
 
 #include "fcontroller.h"
+#include "byte.h"
 
 using namespace std;
 
@@ -14,30 +15,30 @@ int main()
     FController file(name);
 
     cout << "Direccion MAC Destino: ";
-    for(int i = 0;i<6;i++) cout << setw(2) << setfill('0') << hex << (int)file.getNext() << " ";
+    for(int i = 0;i<6;i++) cout << file.getNext() << " ";
     cout << endl;
 
     cout << "Direccion MAC Origen: ";
-    for(int i = 0;i<6;i++) cout << setw(2) << setfill('0') << hex << (int)file.getNext() << " ";
+    for(int i = 0;i<6;i++) cout << file.getNext() << " ";
     cout << endl;
 
     cout << "Tipo: ";
-    unsigned char type1 = file.getNext();
-    unsigned char type2 = file.getNext();
-    cout << setw(2) << setfill('0') << hex << (int)type1 << " ";
-    cout << setw(2) << setfill('0') << hex << (int)type2;
+    Byte type1 = file.getNext();
+    Byte type2 = file.getNext();
+    cout << type1 << " ";
+    cout << type2;
     cout << " <";
 
-    if((int)type1 == 8){
-        if((int)type2 == 0) cout << "IPv4";
-        if((int)type2 == 6) cout << "ARP";
+    if(type1 == 8){
+        if(type2 == 0) cout << "IPv4";
+        if(type2 == 6) cout << "ARP";
     }else{
-        if((int)type1 == 128 && (int)type2 == 53) cout << "RARP";
-        if((int)type1 == 134 && (int)type2 == 221) cout << "RARP";
+        if(type1 == 128 && type2 == 53) cout << "RARP";
+        if(type1 == 134 && type2 == 221) cout << "RARP";
     }
     cout << ">" << endl;
     cout << "Datos: ";
-    while(!file.isEOF())cout << setw(2) << setfill('0') << hex << (int)file.getNext() << " ";
+    while(!file.isEOF())cout << file.getNext() << " ";
 
 
 }

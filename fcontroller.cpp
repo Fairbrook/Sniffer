@@ -9,16 +9,17 @@ FController::FController(const std::string&n)
 }
 
 
-unsigned char FController::getNext()
+Byte FController::getNext()
 {
     unsigned char aux;
+    if(isEOF())throw "EOF";
     file.open(name,ios::in|ios::out);
     file.seekg(cursor,file.beg);
     aux = file.get();
     cursor = file.tellg();
     file.clear();
     file.close();
-    return aux;
+    return Byte(aux);
 }
 
 

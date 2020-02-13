@@ -1,14 +1,23 @@
 # depslib dependency file v1.0
-1581015208 source:/home/kevin/Documents/Redes I/Sniffer/fcontroller.cpp
+1581605031 source:/home/kevin/Documents/Redes I/Sniffer/fcontroller.cpp
 	"fcontroller.h"
 
-1581015205 /home/kevin/Documents/Redes I/Sniffer/fcontroller.h
+1581603458 /home/kevin/Documents/Redes I/Sniffer/fcontroller.h
 	<fstream>
 	<iostream>
 	<string>
+	"byte.h"
 
-1581015788 source:/home/kevin/Documents/Redes I/Sniffer/main.cpp
+1581604298 source:/home/kevin/Documents/Redes I/Sniffer/main.cpp
 	<iostream>
 	<iomanip>
 	"fcontroller.h"
+	"byte.h"
+
+1581604298 /home/kevin/Documents/Redes I/Sniffer/byte.h
+	<iostream>
+	<iomanip>
+
+1581604299 source:/home/kevin/Documents/Redes I/Sniffer/byte.cpp
+	"byte.h"
 
