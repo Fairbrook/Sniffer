@@ -15,7 +15,11 @@ public:
 
     unsigned char getData(){return data;}
 
+    Byte& operator=(const Byte&);
+    bool operator[](const int&);
     bool operator==(const int&);
+    int operator*(const int&);
+    int operator+(const int&);
     friend std::ostream& operator << (std::ostream& os, const Byte &b);
 };
 
