@@ -6,18 +6,21 @@ FController::FController(const std::string&n)
 {
     name = n;
     cursor = 0;
+    file.open(name,std::ios::in | std::ios::binary);
+    if(!file.good())throw "Not a File";
+    file.close();
 }
 
 
 Byte FController::getNext()
 {
-    unsigned char aux;
+    char aux;
     if(isEOF())throw "EOF";
-    file.open(name,ios::in|ios::out);
+    file.open(name,std::ios::in | std::ios::binary);    
+    file.setf(std::ios_base::hex);
     file.seekg(cursor,file.beg);
-    aux = file.get();
+    file.get(aux);
     cursor = file.tellg();
-    file.clear();
     file.close();
     return Byte(aux);
 }
@@ -25,10 +28,18 @@ Byte FController::getNext()
 
 bool FController::isEOF()
 {
-    file.open(name,ios::in|ios::out);
+    file.open(name,std::ios::in | std::ios::binary);
     file.seekg(cursor,file.beg);
     bool value = !file.good();
     file.clear();
     file.close();
     return value;
+}
+
+bool FController::isFile(const string &s){
+    ifstream aux(s);
+    bool state = aux.good();
+    aux.clear();
+    aux.close();
+    return state;
 }

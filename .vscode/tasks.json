@@ -5,13 +5,15 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "g++.exe build active file",
+            "label": "g++ build active proyect",
             "command": "g++",
             "args": [
               "-g",
-              "*.cpp",
+              "src/*.cpp",
+              "-I",
+              "include",
               "-o",
-              "${workspaceFolderBasename}"
+              "bin/${workspaceFolderBasename}.exe"
             ],
             "options": {
               "cwd": "${workspaceFolder}"
@@ -19,11 +21,11 @@
           },
           {
             "type": "shell",
-            "label": "gcc.exe build active file",
-            "command": "C:\\MinGW\\bin\\gcc.exe",
+            "label": "gcc build active proyect",
+            "command": "gcc.exe",
             "args": [
               "-g",
-              "${workspaceFolder}\\*.cpp",
+              "src/*.c",
               "-o",
               "${workspaceFolder}\\${workspaceFolderBasename}.exe"
             ],
