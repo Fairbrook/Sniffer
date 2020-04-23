@@ -36,6 +36,15 @@ bool FController::isEOF()
     return value;
 }
 
+int FController::getLenght(){
+    file.open(name,std::ios::in | std::ios::binary);
+    file.seekg(0,file.end);
+    int lenght = file.tellg();
+    file.clear();
+    file.close();
+    return lenght;
+}
+
 bool FController::isFile(const string &s){
     ifstream aux(s);
     bool state = aux.good();

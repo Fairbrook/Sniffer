@@ -17,6 +17,7 @@ public:
     FController(const std::string&);
     Byte getNext();
     bool isEOF();
+    int getLenght();
     static bool isFile(const std::string&);
 };
 
