@@ -61,6 +61,9 @@ IPv6::IPv6(const vector<Byte>&data){
     case 1:
         protocol= new ICMPv4(vector<Byte>(begin+counter,data.end()));
         break;
+    case 6:
+        protocol = new TCP(vector<Byte>(begin+counter,data.end()));
+        break;
      case 58:
         protocol= new ICMPv6(vector<Byte>(begin+counter,data.end()));
         break;

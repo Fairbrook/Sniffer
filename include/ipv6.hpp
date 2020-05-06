@@ -11,6 +11,7 @@
 #include "ipv6add.hpp"
 #include "icmpv4.hpp"
 #include "icmpv6.hpp"
+#include "tcp.hpp"
 
 class IPv6: public Protocol
 {

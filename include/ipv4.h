@@ -10,6 +10,7 @@
 #include "protocol.h"
 #include "ipadd.h"
 #include "icmpv4.hpp"
+#include "tcp.hpp"
 
 class IPv4: public Protocol
 {

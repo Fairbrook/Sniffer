@@ -42,7 +42,9 @@
         "typeinfo": "cpp",
         "future": "cpp",
         "functional": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "map": "cpp",
+        "cinttypes": "cpp"
     },
     "C_Cpp.default.cppStandard": "c++11",
     "C_Cpp.default.includePath": ["${default}","./include"]
