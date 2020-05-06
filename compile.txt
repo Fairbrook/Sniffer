@@ -1,1 +1,1 @@
-c:\TDM-GCC-64\bin\g++ arp.cpp ethernet.cpp icmpv4.cpp ipadd.cpp ipv6.cpp mac.cpp protocol.cpp byte.cpp fcontroller.cpp icmpv6.cpp ipv4.cpp ipv6add.cpp main.cpp -o ..\bin\Sniffer.exe -I ..\include\ -L ..\Lib\x64\ -lwpcap
+c:\TDM-GCC-64\bin\g++ arp.cpp ethernet.cpp icmpv4.cpp ipadd.cpp ipv6.cpp mac.cpp protocol.cpp byte.cpp fcontroller.cpp icmpv6.cpp ipv4.cpp ipv6add.cpp tcp.cpp main.cpp -o ..\bin\Sniffer.exe -I ..\include\ -L ..\Lib\x64\ -lwpcap 
