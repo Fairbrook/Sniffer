@@ -70,7 +70,9 @@ IPv4::IPv4(const vector<Byte> &data) : protocol()
     case 6:
         protocol = new TCP(vector<Byte>(begin + counter, data.end()));
         break;
-
+    case 17:
+        protocol = new UDP(vector<Byte>(begin+counter,data.end()));
+        break;
     default:
         protocol = new Protocol("");
         break;

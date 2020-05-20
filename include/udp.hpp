@@ -1,5 +1,5 @@
-#ifndef INCLUDE_TCP_H
-#define INCLUDE_TCP_H
+#ifndef INCLUDE_UDP_H
+#define INCLUDE_UDP_H
 
 #include <vector>
 #include <string>
@@ -8,31 +8,25 @@
 #include <math.h>
 
 #include "protocol.h"
-#include "dns.hpp"
 #include "byte.h"
+#include "dns.hpp"
 
-class TCP : public Protocol
+class UDP : public Protocol
 {
 private:
     int originPort;
     int destinyPort;
-    unsigned int secuence;
-    unsigned int ack;
-    int header;
-    bool flags[9];
-    int window;
+    unsigned int lenght;
     int checksum;
-    int urg;
-    int puntero;
-    Protocol *protocol;
+    Protocol* protocol;
 
     std::vector<Byte> data;
 
     static std::string getPortName(const int&);
 
 public:
-    TCP(){};
-    TCP(const std::vector<Byte> &);
+    UDP(){};
+    UDP(const std::vector<Byte> &);
     std::string toString() const;
 };
 
